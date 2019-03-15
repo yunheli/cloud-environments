@@ -9,16 +9,16 @@ nexus:
     repository: registry.cn-beijing.aliyuncs.com/acs-sample/jenkins-x-nexus
     tag: 0.0.19
   persistence:
-    storageClass: "alicloud-disk-available"
-    size: 20Gi
+    storageClass: "standard"
+    size: 2Gi
 
 chartmuseum:
   image:
     repository: registry.cn-beijing.aliyuncs.com/acs-sample/jenkins-x-chartmuseum
     tag: v0.7.1
   persistence:
-    storageClass: "alicloud-disk-available"
-    size: 20Gi
+    storageClass: "standard"
+    size: 2Gi
 
 jenkins:
   Master:
@@ -36,8 +36,8 @@ jenkins:
           Maven:
             Image: registry.cn-beijing.aliyuncs.com/haoshuwei/jenkins-x-builder-maven:0.1.185 
   Persistence:
-    StorageClass: "alicloud-disk-available"
-    Size: 40Gi
+    StorageClass: "standard"
+    Size: 5Gi
 
 monocular:
   enabled: false
